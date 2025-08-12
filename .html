@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMath Pro - Grade 12 Mathematics & Physical Sciences</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EduMath Pro</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#courses" class="nav-link">Courses</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <div id="auth-section">
+                        <button id="login-btn" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Master Grade 12 Mathematics & Physical Sciences</h1>
+                <p>Comprehensive tutorials, interactive exercises, and expert guidance to excel in your final year</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToSection('pricing')">Get Started</button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('courses')">Explore Courses</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <i class="fas fa-calculator"></i>
+                    <span>Mathematics</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-atom"></i>
+                    <span>Physics</span>
+                </div>
+                <div class="floating-card">
+                    <i class="fas fa-flask"></i>
+                    <span>Chemistry</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>Our Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathematics</h3>
+                        <ul>
+                            <li>Calculus & Derivatives</li>
+                            <li>Functions & Graphs</li>
+                            <li>Trigonometry</li>
+                            <li>Probability & Statistics</li>
+                            <li>Analytical Geometry</li>
+                        </ul>
+                        <div class="course-features">
+                            <span><i class="fas fa-video"></i> 50+ Video Lessons</span>
+                            <span><i class="fas fa-file-alt"></i> Practice Tests</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Physics</h3>
+                        <ul>
+                            <li>Mechanics & Motion</li>
+                            <li>Waves & Sound</li>
+                            <li>Electricity & Magnetism</li>
+                            <li>Light & Optics</li>
+                            <li>Modern Physics</li>
+                        </ul>
+                        <div class="course-features">
+                            <span><i class="fas fa-video"></i> 45+ Video Lessons</span>
+                            <span><i class="fas fa-flask"></i> Virtual Lab</span>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Chemistry</h3>
+                        <ul>
+                            <li>Chemical Bonding</li>
+                            <li>Organic Chemistry</li>
+                            <li>Reaction Kinetics</li>
+                            <li>Acids & Bases</li>
+                            <li>Electrochemistry</li>
+                        </ul>
+                        <div class="course-features">
+                            <span><i class="fas fa-video"></i> 40+ Video Lessons</span>
+                            <span><i class="fas fa-beaker"></i> Simulations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Choose Your Plan</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">R</span>
+                            <span class="amount">299</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Access to one subject</li>
+                            <li><i class="fas fa-check"></i> Basic video lessons</li>
+                            <li><i class="fas fa-check"></i> Practice exercises</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="selectPlan('basic')">Choose Plan</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="badge">Most Popular</div>
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">R</span>
+                            <span class="amount">499</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> All subjects included</li>
+                            <li><i class="fas fa-check"></i> HD video lessons</li>
+                            <li><i class="fas fa-check"></i> Interactive simulations</li>
+                            <li><i class="fas fa-check"></i> Practice tests & quizzes</li>
+                            <li><i class="fas fa-check"></i> Progress tracking</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="selectPlan('premium')">Choose Plan</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Ultimate</h3>
+                        <div class="price">
+                            <span class="currency">R</span>
+                            <span class="amount">799</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Everything in Premium</li>
+                            <li><i class="fas fa-check"></i> 1-on-1 tutoring sessions</li>
+                            <li><i class="fas fa-check"></i> Exam preparation</li>
+                            <li><i class="fas fa-check"></i> Certificate of completion</li>
+                            <li><i class="fas fa-check"></i> 24/7 support</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="selectPlan('ultimate')">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Why Choose EduMath Pro?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>Expert Teachers</h3>
+                        <p>Learn from experienced educators with proven track records</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Friendly</h3>
+                        <p>Study anywhere, anytime with our responsive platform</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Progress Tracking</h3>
+                        <p>Monitor your learning progress with detailed analytics</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-medal"></i>
+                        <h3>Proven Results</h3>
+                        <p>Join thousands of students who improved their grades</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="auth-container">
+                    <h2>Create Your Account</h2>
+                    <div id="auth-options">
+                        <button class="auth-btn google-auth" onclick="signInWithGoogle()">
+                            <i class="fab fa-google"></i>
+                            Continue with Google
+                        </button>
+                        <button class="auth-btn facebook-auth" onclick="signInWithFacebook()">
+                            <i class="fab fa-facebook-f"></i>
+                            Continue with Facebook
+                        </button>
+                        <button class="auth-btn phone-auth" onclick="showPhoneAuth()">
+                            <i class="fas fa-phone"></i>
+                            Continue with Phone
+                        </button>
+
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+
+                        <form id="email-auth-form" class="auth-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Sign In with Email</button>
+                        </form>
+
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="#" onclick="switchToSignUp()">Sign up here</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Authentication Form -->
+                    <div id="phone-auth-form" class="auth-form" style="display: none;">
+                        <button class="back-btn" onclick="showMainAuth()">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <h3>Phone Authentication</h3>
+                        <div id="phone-step-1">
+                            <div class="form-group">
+                                <label>Country Code</label>
+                                <select id="country-code">
+                                    <option value="+27">🇿🇦 +27 (South Africa)</option>
+                                    <option value="+1">🇺🇸 +1 (USA)</option>
+                                    <option value="+44">🇬🇧 +44 (UK)</option>
+                                    <option value="+91">🇮🇳 +91 (India)</option>
+                                    <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone-number" placeholder="Enter phone number" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-full" onclick="sendOTP()">
+                                Send Verification Code
+                            </button>
+                        </div>
+
+                        <div id="phone-step-2" style="display: none;">
+                            <p>We've sent a verification code to <span id="phone-display"></span></p>
+                            <div class="form-group">
+                                <input type="text" id="otp-code" placeholder="Enter 6-digit code" maxlength="6" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-full" onclick="verifyOTP()">
+                                Verify Code
+                            </button>
+                            <p class="resend-link">
+                                Didn't receive the code? <a href="#" onclick="sendOTP()">Resend</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="payment-container">
+                <h2>Complete Your Purchase</h2>
+                <div id="selected-plan-info"></div>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" placeholder="Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="john@example.com" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" required style="margin-right: 0.5rem;">
+                            I agree to the <a href="#" style="color: var(--primary-color);">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-credit-card" style="margin-right: 0.5rem;"></i>
+                        Pay with PayFast - R<span id="payment-amount"></span>
+                    </button>
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                        Secure payment processing by PayFast
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard (Hidden until authenticated and paid) -->
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <div class="dashboard-header">
+            <h1>Welcome to Your Dashboard</h1>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <button onclick="logout()" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div id="subject-overview" class="subject-grid">
+                <div class="subject-card" onclick="openSubject('mathematics')">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Mathematics</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                    <span>45% Complete</span>
+                </div>
+                <div class="subject-card" onclick="openSubject('physics')">
+                    <i class="fas fa-atom"></i>
+                    <h3>Physics</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%"></div>
+                    </div>
+                    <span>30% Complete</span>
+                </div>
+                <div class="subject-card" onclick="openSubject('chemistry')">
+                    <i class="fas fa-flask"></i>
+                    <h3>Chemistry</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <span>20% Complete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mathematics Course Content -->
+    <div id="mathematics-content" class="course-content" style="display: none;">
+        <div class="course-header">
+            <button onclick="backToDashboard()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <h1><i class="fas fa-calculator"></i> Mathematics - Grade 12</h1>
+        </div>
+        <div class="modules-container">
+            <div class="module-card">
+                <h3>Module 1: Functions & Graphs</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%"></div>
+                    </div>
+                    <span>80% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.1 Linear Functions</span>
+                        <button onclick="openLesson('math', '1.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.2 Quadratic Functions</span>
+                        <button onclick="openLesson('math', '1.2')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.3 Exponential Functions</span>
+                        <button onclick="openLesson('math', '1.3')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>1.4 Logarithmic Functions</span>
+                        <button onclick="openLesson('math', '1.4')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>1.5 Trigonometric Functions</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 2: Calculus</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                    <span>45% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>2.1 Limits and Continuity</span>
+                        <button onclick="openLesson('math', '2.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>2.2 Derivatives</span>
+                        <button onclick="openLesson('math', '2.2')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>2.3 Applications of Derivatives</span>
+                        <button onclick="openLesson('math', '2.3')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>2.4 Integration</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 3: Probability & Statistics</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <span>20% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>3.1 Basic Probability</span>
+                        <button onclick="openLesson('math', '3.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>3.2 Conditional Probability</span>
+                        <button onclick="openLesson('math', '3.2')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>3.3 Normal Distribution</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Physics Course Content -->
+    <div id="physics-content" class="course-content" style="display: none;">
+        <div class="course-header">
+            <button onclick="backToDashboard()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <h1><i class="fas fa-atom"></i> Physics - Grade 12</h1>
+        </div>
+        <div class="modules-container">
+            <div class="module-card">
+                <h3>Module 1: Mechanics</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                    <span>60% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.1 Motion in One Dimension</span>
+                        <button onclick="openLesson('physics', '1.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.2 Motion in Two Dimensions</span>
+                        <button onclick="openLesson('physics', '1.2')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>1.3 Newton's Laws of Motion</span>
+                        <button onclick="openLesson('physics', '1.3')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>1.4 Work and Energy</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 2: Waves & Sound</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%"></div>
+                    </div>
+                    <span>25% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>2.1 Wave Properties</span>
+                        <button onclick="openLesson('physics', '2.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>2.2 Sound Waves</span>
+                        <button onclick="openLesson('physics', '2.2')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>2.3 Wave Interference</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 3: Electricity & Magnetism</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%"></div>
+                    </div>
+                    <span>10% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>3.1 Electric Fields</span>
+                        <button onclick="openLesson('physics', '3.1')" class="btn btn-sm btn-primary">Start</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>3.2 Electric Circuits</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>3.3 Magnetic Fields</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chemistry Course Content -->
+    <div id="chemistry-content" class="course-content" style="display: none;">
+        <div class="course-header">
+            <button onclick="backToDashboard()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </button>
+            <h1><i class="fas fa-flask"></i> Chemistry - Grade 12</h1>
+        </div>
+        <div class="modules-container">
+            <div class="module-card">
+                <h3>Module 1: Chemical Bonding</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                    <span>40% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>1.1 Ionic Bonding</span>
+                        <button onclick="openLesson('chemistry', '1.1')" class="btn btn-sm">Review</button>
+                    </div>
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>1.2 Covalent Bonding</span>
+                        <button onclick="openLesson('chemistry', '1.2')" class="btn btn-sm btn-primary">Continue</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>1.3 Metallic Bonding</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 2: Organic Chemistry</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 15%"></div>
+                    </div>
+                    <span>15% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>2.1 Hydrocarbons</span>
+                        <button onclick="openLesson('chemistry', '2.1')" class="btn btn-sm btn-primary">Start</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>2.2 Functional Groups</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>2.3 Organic Reactions</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module-card">
+                <h3>Module 3: Acids & Bases</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 5%"></div>
+                    </div>
+                    <span>5% Complete</span>
+                </div>
+                <div class="module-content">
+                    <div class="lesson-item current">
+                        <i class="fas fa-play-circle"></i>
+                        <span>3.1 pH and pOH</span>
+                        <button onclick="openLesson('chemistry', '3.1')" class="btn btn-sm btn-primary">Start</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>3.2 Acid-Base Reactions</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                    <div class="lesson-item locked">
+                        <i class="fas fa-lock"></i>
+                        <span>3.3 Buffer Solutions</span>
+                        <button class="btn btn-sm" disabled>Locked</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lesson Viewer -->
+    <div id="lesson-viewer" class="lesson-viewer" style="display: none;">
+        <div class="lesson-header">
+            <button onclick="backToSubject()" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Course
+            </button>
+            <h2 id="lesson-title"></h2>
+        </div>
+        <div class="lesson-content">
+            <div id="lesson-video" class="video-container">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Video content would be loaded here</p>
+                </div>
+            </div>
+            <div id="lesson-text" class="lesson-text-content">
+                <!-- Lesson content will be dynamically loaded here -->
+            </div>
+            <div class="lesson-actions">
+                <button onclick="markComplete()" class="btn btn-primary">Mark as Complete</button>
+                <button onclick="takeQuiz()" class="btn btn-secondary">Take Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 EduMath Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
